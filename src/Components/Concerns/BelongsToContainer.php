@@ -1,9 +1,9 @@
 <?php
 
-namespace Filament\Forms\Components\Concerns;
+namespace AAbosham\Filament\Forms\Components\Concerns;
 
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Contracts\HasForms;
+use AAbosham\Filament\Forms\ComponentContainer;
+use AAbosham\Filament\Forms\Contracts\HasForms;
 
 trait BelongsToContainer
 {

@@ -13,7 +13,7 @@ Implement the `HasForms` interface and use the `InteractsWithForms` trait:
 
 namespace App\Http\Livewire;
 
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -43,7 +43,7 @@ Finally, add any [fields](fields), [layout components](layout), and [custom comp
 
 namespace App\Http\Livewire;
 
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -86,7 +86,7 @@ To fill a form with data, call the `fill()` method on your form, and pass an arr
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -134,7 +134,7 @@ To fill a form with default values, call the `fill()` method on your form withou
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -179,7 +179,7 @@ To get all form data in an array, call the `getState()` method on your form.
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -322,7 +322,7 @@ Pass a model instance to a form using the `getFormModel()` method:
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -361,7 +361,7 @@ Alternatively, you may pass the model instance to the field that requires it dir
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -399,7 +399,7 @@ You may receive some of the same benefits of registering a model by registering 
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -444,7 +444,7 @@ For example, `BelongsToManyMultiSelect` is a multi-select field that can be used
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -494,7 +494,7 @@ In this situation, you may call the `model()` and `saveRelationships()` methods 
 namespace App\Http\Livewire;
 
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;use Livewire\Component;
 
@@ -545,7 +545,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Author;
 use App\Models\Post;
-use Filament\Forms;
+use AAbosham\Filament\Forms;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 

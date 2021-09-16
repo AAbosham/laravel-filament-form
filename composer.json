@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Filament\\Forms\\": "src"
+            "AAbosham\\Filament\\Forms\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Filament\\Forms\\FormsServiceProvider"
+                "AAbosham\\Filament\\Forms\\FormsServiceProvider"
             ]
         }
     },

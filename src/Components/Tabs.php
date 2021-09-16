@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Components;
+namespace AAbosham\Filament\Forms\Components;
 
-use Filament\Forms\Components\Tabs\Tab;
+use AAbosham\Filament\Forms\Components\Tabs\Tab;
 
 class Tabs extends Component
 {

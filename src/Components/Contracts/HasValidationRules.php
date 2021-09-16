@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Components\Contracts;
+namespace AAbosham\Filament\Forms\Components\Contracts;
 
 interface HasValidationRules
 {

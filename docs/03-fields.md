@@ -2,7 +2,7 @@
 title: Fields
 ---
 
-Field classes can be found in the `Filament\Form\Components` namespace.
+Field classes can be found in the `AAbosham\Filament\Form\Components` namespace.
 
 Fields may be created using the static `make()` method, passing its name. The name of the field should correspond to a property on your Livewire component. You may use [Livewire's "dot syntax"](https://laravel-livewire.com/docs/properties#binding-nested-data) to bind fields to nested properties such as arrays and Eloquent models.
 
@@ -75,7 +75,7 @@ Field::make('name')->placeholder('John Doe')
 If your field is in a grid layout, you may specify the number of columns it spans at any breakpoint:
 
 ```php
-use Filament\Forms\Components\Grid;use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Grid;use AAbosham\Filament\Forms\Components\TextInput;
 
 Grid::make([
     'default' => 1,
@@ -103,11 +103,11 @@ Similar to a [repeater](#repeater), the builder component allows you to output a
 The primary use of the builder component is to build web page content using predefined blocks. The example below defines multiple blocks for different elements in the page content. On the frontend of your website, you could loop through each block in the JSON and format it how you wish.
 
 ```php
-use Filament\Forms\Components\Builder;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Builder;
+use AAbosham\Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\MarkdownEditor;
+use AAbosham\Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 Builder::make('content')
     ->blocks([
@@ -144,8 +144,8 @@ Builder::make('content')
 As evident in the above example, blocks can be defined within the `blocks()` method of the component. Blocks are `Builder\Block` objects, and require a unique name, and a component schema:
 
 ```php
-use Filament\Forms\Components\Builder;
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Builder;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 Builder::make('content')
     ->blocks([
@@ -161,7 +161,7 @@ Builder::make('content')
 By default, the label of the block will be automatically determined based on its name. To override the block's label, you may use the `label()` method. Customizing the label in this way is useful if you wish to use a [translation string for localization](https://laravel.com/docs/localization#retrieving-translation-strings):
 
 ```php
-use Filament\Forms\Components\Builder;
+use AAbosham\Filament\Forms\Components\Builder;
 
 Builder\Block::make('heading')->label(__('blocks.heading'))
 ```
@@ -169,7 +169,7 @@ Builder\Block::make('heading')->label(__('blocks.heading'))
 Blocks may also have an icon, which is displayed next to the label. The `icon()` method accepts the name of any Blade icon component:
 
 ```php
-use Filament\Forms\Components\Builder;
+use AAbosham\Filament\Forms\Components\Builder;
 
 Builder\Block::make('heading')->icon('heroicon-o-archive')
 ```
@@ -179,7 +179,7 @@ Builder\Block::make('heading')->icon('heroicon-o-archive')
 The checkbox component, similar to a [toggle](#toggle), allows you to interact a boolean value.
 
 ```php
-use Filament\Forms\Components\Checkbox;
+use AAbosham\Filament\Forms\Components\Checkbox;
 
 Checkbox::make('is_admin'),
 ```
@@ -189,7 +189,7 @@ Checkbox fields have two layout modes, inline and stacked. By default, they are 
 When the checkbox is inline, its label is adjacent to it:
 
 ```php
-use Filament\Forms\Components\Checkbox;
+use AAbosham\Filament\Forms\Components\Checkbox;
 
 Checkbox::make('is_admin')->inline()
 ```
@@ -197,7 +197,7 @@ Checkbox::make('is_admin')->inline()
 When the checkbox is stacked, its label is above it:
 
 ```php
-use Filament\Forms\Components\Checkbox;
+use AAbosham\Filament\Forms\Components\Checkbox;
 
 Checkbox::make('is_admin')->stacked()
 ```
@@ -222,8 +222,8 @@ class User extends Model
 The date-time picker provides an interactive interface for selecting a date, and optionally a time.
 
 ```php
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\DateTimePicker;
+use AAbosham\Filament\Forms\Components\DatePicker;
+use AAbosham\Filament\Forms\Components\DateTimePicker;
 
 DatePicker::make('date_of_birth')
 DateTimePicker::make('published_at')
@@ -232,7 +232,7 @@ DateTimePicker::make('published_at')
 You may restrict the minimum and maximum date that can be selected with the picker. The `minDate()` and `maxDate()` methods accept a `DateTime` instance (e.g. Carbon), or a string:
 
 ```php
-use Filament\Forms\Components\DatePicker;
+use AAbosham\Filament\Forms\Components\DatePicker;
 
 DatePicker::make('date_of_birth')
     ->minDate(now()->subYears(150))
@@ -242,7 +242,7 @@ DatePicker::make('date_of_birth')
 You may customize the format of the field when it is saved in your database, using the `format()` method. This accepts a string date format, using [PHP date formatting tokens](https://www.php.net/manual/en/datetime.format.php):
 
 ```php
-use Filament\Forms\Components\DatePicker;
+use AAbosham\Filament\Forms\Components\DatePicker;
 
 DatePicker::make('date_of_birth')->format('d/m/Y')
 ```
@@ -250,7 +250,7 @@ DatePicker::make('date_of_birth')->format('d/m/Y')
 You may also customize the display format of the field, separately from the format used when it is saved in your database. For this, use the `displayFormat()` method, which also accepts a string date format, using [PHP date formatting tokens](https://www.php.net/manual/en/datetime.format.php):
 
 ```php
-use Filament\Forms\Components\DatePicker;
+use AAbosham\Filament\Forms\Components\DatePicker;
 
 DatePicker::make('date_of_birth')->displayFormat('d/m/Y')
 ```
@@ -258,7 +258,7 @@ DatePicker::make('date_of_birth')->displayFormat('d/m/Y')
 When using the time picker, you may disable the seconds input using the `withoutSeconds()` method:
 
 ```php
-use Filament\Forms\Components\DateTimePicker;
+use AAbosham\Filament\Forms\Components\DateTimePicker;
 
 DateTimePicker::make('published_at')->withoutSeconds()
 ```
@@ -266,7 +266,7 @@ DateTimePicker::make('published_at')->withoutSeconds()
 In some countries, the first day of the week is not Monday. To customize the first day of the week in the date picker, use the `forms.components.date_time_picker.first_day_of_week` config option, or the `firstDayOfWeek()` method on the component. 0 to 7 are accepted values, with Monday as 1 and Sunday as 7 or 0:
 
 ```php
-use Filament\Forms\Components\DateTimePicker;
+use AAbosham\Filament\Forms\Components\DateTimePicker;
 
 DateTimePicker::make('published_at')->firstDayOfWeek(7)
 ```
@@ -274,7 +274,7 @@ DateTimePicker::make('published_at')->firstDayOfWeek(7)
 There are additionally convenient helper methods to set the first day of the week more semantically:
 
 ```php
-use Filament\Forms\Components\DateTimePicker;
+use AAbosham\Filament\Forms\Components\DateTimePicker;
 
 DateTimePicker::make('published_at')->weekStartsOnMonday()
 DateTimePicker::make('published_at')->weekStartsOnSunday()
@@ -285,7 +285,7 @@ DateTimePicker::make('published_at')->weekStartsOnSunday()
 The file upload field is based on [Filepond](https://pqina.nl/filepond).
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('attachment'),
 ```
@@ -295,7 +295,7 @@ By default, files will be uploaded publicly to your default storage disk.
 To change the disk and directory that files are saved in, and their visibility, use the `disk()`, `directory()` and `visibility` methods:
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('attachment')
     ->disk('s3')
@@ -308,7 +308,7 @@ FileUpload::make('attachment')
 You may restrict the types of files that may be uploaded using the `acceptedFileTypes()` method, and passing an array of MIME types. You may also use the `image()` method as shorthand to allow all image MIME types.
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('document')->acceptedFileTypes(['application/pdf'])
 FileUpload::make('image')->image()
@@ -317,7 +317,7 @@ FileUpload::make('image')->image()
 You may also restrict the size of uploaded files, in kilobytes:
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('attachment')
     ->minSize(512)
@@ -329,7 +329,7 @@ FileUpload::make('attachment')
 Filepond allows you to crop and resize images before they are uploaded. You can customize this behaviour using the `imageCropAspectRatio()`, `imageResizeTargetHeight()` and `imageResizeTargetWidth()` methods.
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('image')
     ->image()
@@ -341,7 +341,7 @@ FileUpload::make('image')
 You may also alter the general appearance of the Filepond component. Available options for these methods are available on the [Filepond website](https://pqina.nl/filepond/docs/api/instance/properties/#styles).
 
 ```php
-use Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
 
 FileUpload::make('attachment')
     ->imagePreviewHeight('250')
@@ -356,7 +356,7 @@ FileUpload::make('attachment')
 You may also upload multiple files, using the multiple file upload component. This stores URLs in JSON, but you may customize it to write to a relationship instead.
 
 ```php
-use Filament\Forms\Components\MultipleFileUpload;
+use AAbosham\Filament\Forms\Components\MultipleFileUpload;
 
 MultipleFileUpload::make('attachments')
 ```
@@ -364,8 +364,8 @@ MultipleFileUpload::make('attachments')
 You can customize the underlying file upload component by passing an instance of it to `uploadComponent()`. It must have the name `file`, but you can customize its label, ID and validation attribute to hide this if you wish:
 
 ```php
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MultipleFileUpload;
+use AAbosham\Filament\Forms\Components\FileUpload;
+use AAbosham\Filament\Forms\Components\MultipleFileUpload;
 
 MultipleFileUpload::make('attachments')
     ->uploadComponent(
@@ -380,7 +380,7 @@ MultipleFileUpload::make('attachments')
 The hidden component allows you to create a hidden field in your form that holds a value.
 
 ```php
-use Filament\Forms\Components\Hidden;
+use AAbosham\Filament\Forms\Components\Hidden;
 
 Hidden::make('token')
 ```
@@ -390,7 +390,7 @@ Hidden::make('token')
 The markdown editor allows you to edit and preview markdown content, as well as upload images.
 
 ```php
-use Filament\Forms\Components\MarkdownEditor;
+use AAbosham\Filament\Forms\Components\MarkdownEditor;
 
 MarkdownEditor::make('content')
 ```
@@ -398,7 +398,7 @@ MarkdownEditor::make('content')
 You may enable / disable toolbar buttons using a range of convenient methods:
 
 ```php
-use Filament\Forms\Components\MarkdownEditor;
+use AAbosham\Filament\Forms\Components\MarkdownEditor;
 
 MarkdownEditor::make('content')
     ->toolbarButtons([
@@ -433,7 +433,7 @@ MarkdownEditor::make('content')
 You may customise how images are uploaded using configuration methods:
 
 ```php
-use Filament\Forms\Components\MarkdownEditor;
+use AAbosham\Filament\Forms\Components\MarkdownEditor;
 
 MarkdownEditor::make('content')
     ->fileAttachmentsDisk('s3')
@@ -446,7 +446,7 @@ MarkdownEditor::make('content')
 The multi-select component allows you to select multiple values from a list of predefined options:
 
 ```php
-use Filament\Forms\Components\MultiSelect;
+use AAbosham\Filament\Forms\Components\MultiSelect;
 
 MultiSelect::make('technologies')
     ->options([
@@ -478,7 +478,7 @@ You may employ the `relationship()` method of the `BelongsToManyMultiSelect` to 
 
 ```php
 use App\Models\App;
-use Filament\Forms\Components\BelongsToManyMultiSelect;
+use AAbosham\Filament\Forms\Components\BelongsToManyMultiSelect;
 
 BelongsToManyMultiSelect::make('technologies')
     ->relationship('technologies', 'name')
@@ -489,7 +489,7 @@ BelongsToManyMultiSelect::make('technologies')
 You may customise the database query that retrieves options using the third parameter of the `relationship()` method:
 
 ```php
-use Filament\Forms\Components\BelongsToManyMultiSelect;
+use AAbosham\Filament\Forms\Components\BelongsToManyMultiSelect;
 use Illuminate\Database\Eloquent\Builder;
 
 BelongsToManyMultiSelect::make('technologies')
@@ -501,9 +501,9 @@ BelongsToManyMultiSelect::make('technologies')
 The repeater component allows you to output a JSON array of repeated form components.
 
 ```php
-use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Repeater;
+use AAbosham\Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 Repeater::make('members')
     ->schema([
@@ -521,8 +521,8 @@ Repeater::make('members')
 As evident in the above example, the component schema can be defined within the `schema()` method of the component:
 
 ```php
-use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Repeater;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 Repeater::make('members')
     ->schema([
@@ -538,7 +538,7 @@ If you wish to define a repeater with multiple schema blocks that can be repeate
 The rich editor allows you to edit and preview HTML content, as well as upload images.
 
 ```php
-use Filament\Forms\Components\RichEditor;
+use AAbosham\Filament\Forms\Components\RichEditor;
 
 RichEditor::make('content')
 ```
@@ -546,7 +546,7 @@ RichEditor::make('content')
 You may enable / disable toolbar buttons using a range of convenient methods:
 
 ```php
-use Filament\Forms\Components\RichEditor;
+use AAbosham\Filament\Forms\Components\RichEditor;
 
 RichEditor::make('content')
     ->toolbarButtons([
@@ -582,7 +582,7 @@ RichEditor::make('content')
 You may customise how images are uploaded using configuration methods:
 
 ```php
-use Filament\Forms\Components\RichEditor;
+use AAbosham\Filament\Forms\Components\RichEditor;
 
 RichEditor::make('content')
     ->fileAttachmentsDisk('s3')
@@ -595,7 +595,7 @@ RichEditor::make('content')
 The select component allows you to select from a list of predefined options:
 
 ```php
-use Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\Select;
 
 Select::make('status')
     ->options([
@@ -609,7 +609,7 @@ You may enable a search input to allow easier access to many options, using the 
 
 ```php
 use App\Models\User;
-use Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\Select;
 
 Select::make('authorId')
     ->options(User::all()->pluck('name', 'id'))
@@ -630,7 +630,7 @@ You may employ the `relationship()` method of the `BelongsToSelect` to configure
 
 ```php
 use App\Models\Post;
-use Filament\Forms\Components\BelongsToSelect;
+use AAbosham\Filament\Forms\Components\BelongsToSelect;
 
 BelongsToSelect::make('authorId')
     ->relationship('author', 'name')
@@ -642,7 +642,7 @@ You may customise the database query that retrieves options using the third para
 
 ```php
 use App\Models\App;
-use Filament\Forms\Components\BelongsToSelect;
+use AAbosham\Filament\Forms\Components\BelongsToSelect;
 use Illuminate\Database\Eloquent\Builder;
 
 BelongsToSelect::make('authorId')
@@ -656,7 +656,7 @@ The tags input component allows you to interact with a list of tags.
 By default, tags are stored in JSON:
 
 ```php
-use Filament\Forms\Components\TagsInput;
+use AAbosham\Filament\Forms\Components\TagsInput;
 
 TagsInput::make('tags')
 ```
@@ -679,7 +679,7 @@ class Post extends Model
 You may allow the tags to be stored in a separated string, instead of JSON. To set this up, pass the separating character to the `separator()` method:
 
 ```php
-use Filament\Forms\Components\TagsInput;
+use AAbosham\Filament\Forms\Components\TagsInput;
 
 TagsInput::make('tags')->separator(',')
 ```
@@ -691,7 +691,7 @@ TagsInput::make('tags')->separator(',')
 The text input allows you to interact with a string:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')
 ```
@@ -699,7 +699,7 @@ TextInput::make('name')
 You may set the type of string using a set of methods. Some, such as `email()`, also provide validation:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('text')
     ->email()
@@ -712,7 +712,7 @@ TextInput::make('text')
 You may instead use the `type()` method to pass another [HTML input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types):
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('backgroundColor')->type('color')
 ```
@@ -720,7 +720,7 @@ TextInput::make('backgroundColor')->type('color')
 You may place text before and after the input using the `prefix()` and `postfix()` methods:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('domain')
     ->url()
@@ -731,7 +731,7 @@ TextInput::make('domain')
 You may limit the length of the string by setting the `minLength()` and `maxLength()` methods. These methods add both frontend and backend validation:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')
     ->minLength(2)
@@ -741,7 +741,7 @@ TextInput::make('name')
 In addition, you may validate the minimum and maximum value of the input by setting the `minValue()` and `maxValue()` methods:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')
     ->numeric()
@@ -756,7 +756,7 @@ Input masking is the practice of defining a format that the input value must con
 In Filament, you may interact with the `Mask` object in the `mask()` method to configure your mask:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')
     ->mask(fn (TextInput\Mask $mask) => $mask->pattern('+{7}(000)000-00-00'))
@@ -767,7 +767,7 @@ Under the hood, masking is powered by [`imaskjs`](https://imask.js.org). The vas
 You may define and configure a [numeric mask](https://imask.js.org/guide.html#masked-number) to deal with numbers:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('number')
     ->numeric()
@@ -788,7 +788,7 @@ TextInput::make('number')
 [Enum masks](https://imask.js.org/guide.html#enum) limit the options that the user can input:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask->enum(['F1', 'G2', 'H3']))
 ```
@@ -796,7 +796,7 @@ TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask->enum(['F1', 'G
 [Range masks](https://imask.js.org/guide.html#masked-range) can be used to restrict input to a number range:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask
     ->range()
@@ -809,7 +809,7 @@ TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask
 In addition to simple pattens, you may also define multiple [pattern blocks](https://imask.js.org/guide.html#masked-pattern):
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('cost')->mask(fn (TextInput\Mask $mask) => $mask
     ->patternBlocks([
@@ -825,7 +825,7 @@ TextInput::make('cost')->mask(fn (TextInput\Mask $mask) => $mask
 There is also a `money()` method that is able to define easier formatting for currency inputs. This example, the symbol prefix is `$`, there is a `,` thousands separator, and two decimal places:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask->money('$', ',', 2))
 ```
@@ -835,7 +835,7 @@ TextInput::make('code')->mask(fn (TextInput\Mask $mask) => $mask->money('$', ','
 The textarea allows you to interact with a multi-line string:
 
 ```php
-use Filament\Forms\Components\Textarea;
+use AAbosham\Filament\Forms\Components\Textarea;
 
 Textarea::make('description')
 ```
@@ -843,7 +843,7 @@ Textarea::make('description')
 You may change the size of the textarea by defining the `rows()` and `cols()` methods:
 
 ```php
-use Filament\Forms\Components\Textarea;
+use AAbosham\Filament\Forms\Components\Textarea;
 
 Textarea::make('domain')
     ->rows(10)
@@ -853,7 +853,7 @@ Textarea::make('domain')
 You may limit the length of the string by setting the `minLength()` and `maxLength()` methods. These methods add both frontend and backend validation:
 
 ```php
-use Filament\Forms\Components\Textarea;
+use AAbosham\Filament\Forms\Components\Textarea;
 
 Textarea::make('description')
     ->minLength(50)
@@ -865,7 +865,7 @@ Textarea::make('description')
 The toggle component, similar to a [checkbox](#checkbox), allows you to interact a boolean value.
 
 ```php
-use Filament\Forms\Components\Toggle;
+use AAbosham\Filament\Forms\Components\Toggle;
 
 Toggle::make('is_admin')
 ```
@@ -875,7 +875,7 @@ Toggle fields have two layout modes, inline and stacked. By default, they are in
 When the toggle is inline, its label is adjacent to it:
 
 ```php
-use Filament\Forms\Components\Toggle;
+use AAbosham\Filament\Forms\Components\Toggle;
 
 Toggle::make('is_admin')->inline()
 ```
@@ -883,7 +883,7 @@ Toggle::make('is_admin')->inline()
 When the toggle is stacked, its label is above it:
 
 ```php
-use Filament\Forms\Components\Toggle;
+use AAbosham\Filament\Forms\Components\Toggle;
 
 Toggle::make('is_admin')->stacked()
 ```
@@ -891,7 +891,7 @@ Toggle::make('is_admin')->stacked()
 Toggles may also use an "on icon" and an "off icon". These are displayed on its handle and could provide a greater indication to what your field represents. The parameter to each method must contain the name of a Blade icon component:
 
 ```php
-use Filament\Forms\Components\Toggle;
+use AAbosham\Filament\Forms\Components\Toggle;
 
 Toggle::make('is_admin')
     ->onIcon('heroicon-s-lightning-bolt'),
@@ -918,7 +918,7 @@ class User extends Model
 Aside from [building custom fields](#building-custom-fields), you may create "view" fields which allow you to create custom fields without extra PHP classes.
 
 ```php
-use Filament\Forms\Components\ViewField;
+use AAbosham\Filament\Forms\Components\ViewField;
 
 ViewField::make('notifications')->view('filament.forms.components.checkbox-list')
 ```
@@ -939,10 +939,10 @@ You may create your own custom field classes and views, which you can reuse acro
 
 > If you're just creating a simple custom field to use once, you could instead use a [view field](#view) to render any custom Blade file.
 
-Extend the `Filament\Forms\Components\Field` class, and define the `$view` path of the custom field:
+Extend the `AAbosham\Filament\Forms\Components\Field` class, and define the `$view` path of the custom field:
 
 ```php
-use Filament\Forms\Components\Field;
+use AAbosham\Filament\Forms\Components\Field;
 
 class CheckboxList extends Field
 {

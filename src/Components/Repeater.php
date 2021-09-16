@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Components;
+namespace AAbosham\Filament\Forms\Components;
 
-use Filament\Forms\ComponentContainer;
+use AAbosham\Filament\Forms\ComponentContainer;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 

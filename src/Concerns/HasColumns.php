@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
-use Filament\Forms\ComponentContainer;
+use AAbosham\Filament\Forms\ComponentContainer;
 
 trait HasColumns
 {

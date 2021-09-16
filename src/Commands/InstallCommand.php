@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Commands;
+namespace AAbosham\Filament\Forms\Commands;
 
 use Illuminate\Console\Command;
 

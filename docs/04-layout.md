@@ -2,7 +2,7 @@
 title: Layout
 ---
 
-Layout component classes can be found in the `Filament\Form\Components` namespace.
+Layout component classes can be found in the `AAbosham\Filament\Form\Components` namespace.
 
 Components may be created using the static `make()` method. Usually, you will then define the child component `schema()` to display inside:
 
@@ -38,7 +38,7 @@ Component::make()->extraAttributes(['step' => 10])
 The card component may be used to render the form components inside a card:
 
 ```php
-use Filament\Forms\Components\Card;
+use AAbosham\Filament\Forms\Components\Card;
 
 Card::make()
     ->schema([
@@ -49,7 +49,7 @@ Card::make()
 You may use the `columns()` method to easily create a [grid](#grid) within the card:
 
 ```php
-use Filament\Forms\Components\Card;
+use AAbosham\Filament\Forms\Components\Card;
 
 Card::make()
     ->schema([
@@ -63,7 +63,7 @@ Card::make()
 You may want to group fields into a Fieldset. Each fieldset has a label, a border, and a two-column grid by default:
 
 ```php
-use Filament\Forms\Components\Fieldset;
+use AAbosham\Filament\Forms\Components\Fieldset;
 
 Fieldset::make('Label')
     ->schema([
@@ -74,7 +74,7 @@ Fieldset::make('Label')
 You may use the `columns()` method to customize the [grid](#grid) within the fieldset:
 
 ```php
-use Filament\Forms\Components\Fieldset;
+use AAbosham\Filament\Forms\Components\Fieldset;
 
 Fieldset::make('Label')
     ->schema([
@@ -88,7 +88,7 @@ Fieldset::make('Label')
 Generally, form fields are stacked on top of each other in one column. To change this, you may use a grid component:
 
 ```php
-use Filament\Forms\Components\Grid;
+use AAbosham\Filament\Forms\Components\Grid;
 
 Grid::make()
     ->schema([
@@ -101,7 +101,7 @@ By default, grid components will create a two column grid for [the Tailwind `md`
 To customize the number of columns in any grid at different [breakpoints](https://tailwindcss.com/docs/responsive-design#overview), you may pass an array of breakpoints and columns:
 
 ```php
-use Filament\Forms\Components\Grid;
+use AAbosham\Filament\Forms\Components\Grid;
 
 Grid::make([
     'default' => 1,
@@ -119,7 +119,7 @@ Grid::make([
 Since Tailwind is mobile-first, if you leave out a breakpoint, it will fall back to the one set below it:
 
 ```php
-use Filament\Forms\Components\Grid;
+use AAbosham\Filament\Forms\Components\Grid;
 
 Grid::make([
     'sm' => 2,
@@ -133,7 +133,7 @@ Grid::make([
 You may specify the number of columns that any component may span, at any breakpoint in an identical way:
 
 ```php
-use Filament\Forms\Components\Grid;use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\Grid;use AAbosham\Filament\Forms\Components\TextInput;
 
 Grid::make([
     'default' => 1,
@@ -157,7 +157,7 @@ Grid::make([
 Placeholders can be used to render text-only "fields" within your forms. Each placeholder has a state, which is cannot be changed by the user.
 
 ```php
-use Filament\Forms\Components\Placeholder;
+use AAbosham\Filament\Forms\Components\Placeholder;
 
 Placeholder::make('Label')->state('Value, displayed underneath the label')
 ```
@@ -167,7 +167,7 @@ Placeholder::make('Label')->state('Value, displayed underneath the label')
 You may want to separate your fields into sections, each with a heading and description. To do this, you can use a section component:
 
 ```php
-use Filament\Forms\Components\Section;
+use AAbosham\Filament\Forms\Components\Section;
 
 Section::make('Heading')
     ->description('Description')
@@ -179,7 +179,7 @@ Section::make('Heading')
 You may use the `columns()` method to easily create a [grid](#grid) within the section:
 
 ```php
-use Filament\Forms\Components\Section;
+use AAbosham\Filament\Forms\Components\Section;
 
 Section::make('Heading')
     ->schema([
@@ -191,7 +191,7 @@ Section::make('Heading')
 Sections may be `collapsible()` to optionally hide content in long forms:
 
 ```php
-use Filament\Forms\Components\Section;
+use AAbosham\Filament\Forms\Components\Section;
 
 Section::make('Heading')
     ->schema([
@@ -203,7 +203,7 @@ Section::make('Heading')
 You may `collapse()` sections by default:
 
 ```php
-use Filament\Forms\Components\Section;
+use AAbosham\Filament\Forms\Components\Section;
 
 Section::make('Heading')
     ->schema([
@@ -217,7 +217,7 @@ Section::make('Heading')
 Some forms can be long and complex. You may want to use tabs to reduce the number of components that are visible at once:
 
 ```php
-use Filament\Forms\Components\Tabs;
+use AAbosham\Filament\Forms\Components\Tabs;
 
 Tabs::make('Heading')
     ->tabs([
@@ -241,7 +241,7 @@ Tabs::make('Heading')
 Aside from [building custom layout components](#building-custom-layout-components), you may create "view" components which allow you to create custom layouts without extra PHP classes.
 
 ```php
-use Filament\Forms\Components\View;
+use AAbosham\Filament\Forms\Components\View;
 
 View::make('filament.forms.components.wizard')
 ```
@@ -252,10 +252,10 @@ You may create your own custom component classes and views, which you can reuse 
 
 > If you're just creating a simple custom component to use once, you could instead use a [view component](#view) to render any custom Blade file.
 
-Extend the `Filament\Forms\Components\Component` class, and define the `$view` path of the custom component:
+Extend the `AAbosham\Filament\Forms\Components\Component` class, and define the `$view` path of the custom component:
 
 ```php
-use Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Component;
 
 class Wizard extends Component
 {

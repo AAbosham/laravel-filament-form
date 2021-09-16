@@ -1,9 +1,9 @@
 <?php
 
-namespace Filament\Forms\Components\Tabs;
+namespace AAbosham\Filament\Forms\Components\Tabs;
 
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Contracts\CanConcealComponents;
+use AAbosham\Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Contracts\CanConcealComponents;
 use Illuminate\Support\Str;
 
 class Tab extends Component implements CanConcealComponents

@@ -8,9 +8,9 @@ All configuration methods for [fields](fields) and [layout components](layout) a
 
 ```php
 use App\Models\User;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\DatePicker;
+use AAbosham\Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\TextInput;
     
 DatePicker::make('date_of_birth')
     ->displayFormat(function () {
@@ -47,7 +47,7 @@ function ($state) {
 If you wish to access the current component instance, define a `$component` parameter:
 
 ```php
-use Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Component;
 
 function (Component $component) {
     // ...
@@ -107,7 +107,7 @@ function (Livewire $livewire, callable $get, callable $set) {
 By default, forms are only reloaded when they are validated or submitted. You may allow a form to be reloaded when a field is changed, by using the `reactive()` method on that field:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('title')->reactive()
 ```
@@ -121,7 +121,7 @@ A great example to give a use case for this is when you wish to generate a slug 
 Sometimes, you may wish to conditionally hide any form component. You may do this with a `hidden()` method:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('newPassword')->password()
 TextInput::make('newPasswordConfirmation')
@@ -138,7 +138,7 @@ Hydration is the process which fill fields with data. It runs when you call the 
 In this example, the `name` field will always be hydrated with the correctly capitalized name:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')
     ->afterStateHydrated(function (TextInput $component, callable $set, $state) {
@@ -153,7 +153,7 @@ You may use the `afterStateHydrated()` method to customize what happens after a 
 In this example, the `slug` field is updated with the slug version of the `title` field automatically:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 use Illuminate\Support\Str;
 
 TextInput::make('title')
@@ -171,7 +171,7 @@ Hydration is the process which gets data from fields, and transforms it. It runs
 In this example, the `name` field will always be dehydrated with the correctly capitalized name:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('name')->dehydrateStateUsing(fn ($state) => ucwords($state))
 ```
@@ -181,7 +181,7 @@ You may also prevent the field from being dehydrated altogether by passing `fals
 In this example, the `passwordConfirmation` field will not be present in the array returned from `getData()`:
 
 ```php
-use Filament\Forms\Components\TextInput;
+use AAbosham\Filament\Forms\Components\TextInput;
 
 TextInput::make('passwordConfirmation')
     ->password()

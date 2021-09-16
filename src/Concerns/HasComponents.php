@@ -1,9 +1,9 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Field;
+use AAbosham\Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Field;
 
 trait HasComponents
 {

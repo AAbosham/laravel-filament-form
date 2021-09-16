@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Components;
+namespace AAbosham\Filament\Forms\Components;
 
 class View extends Component
 {

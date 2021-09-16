@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Contracts;
+namespace AAbosham\Filament\Forms\Contracts;
 
 use SplFileInfo;
 

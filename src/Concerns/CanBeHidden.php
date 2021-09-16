@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
 trait CanBeHidden
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Components;
+namespace AAbosham\Filament\Forms\Components;
 
-use Filament\Forms\Components\TextInput\Mask;
+use AAbosham\Filament\Forms\Components\TextInput\Mask;
 
 class TextInput extends Field
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Filament\Forms\Components\Builder;
+namespace AAbosham\Filament\Forms\Components\Builder;
 
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Concerns;
+use AAbosham\Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Concerns;
 use Illuminate\Support\Str;
 
 class Block extends Component

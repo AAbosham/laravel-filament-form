@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
-use Filament\Forms\Components\Component;
+use AAbosham\Filament\Forms\Components\Component;
 
 trait BelongsToParentComponent
 {

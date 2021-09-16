@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
-use Filament\Forms\Contracts\HasForms;
+use AAbosham\Filament\Forms\Contracts\HasForms;
 
 trait BelongsToLivewire
 {

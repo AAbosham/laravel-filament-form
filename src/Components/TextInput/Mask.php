@@ -1,6 +1,6 @@
 <?php
 
-namespace Filament\Forms\Components\TextInput;
+namespace AAbosham\Filament\Forms\Components\TextInput;
 
 use Illuminate\Contracts\Support\Jsonable;
 

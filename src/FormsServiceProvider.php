@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms;
+namespace AAbosham\Filament\Forms;
 
-use Filament\Forms\Commands\InstallCommand;
+use AAbosham\Filament\Forms\Commands\InstallCommand;
 use Illuminate\Support\Arr;
 use Laravel\Ui\UiCommand;
 use Spatie\LaravelPackageTools\Package;

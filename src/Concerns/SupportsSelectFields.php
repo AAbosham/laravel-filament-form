@@ -1,8 +1,8 @@
 <?php
 
-namespace Filament\Forms\Concerns;
+namespace AAbosham\Filament\Forms\Concerns;
 
-use Filament\Forms\Components\Select;
+use AAbosham\Filament\Forms\Components\Select;
 
 trait SupportsSelectFields
 {
